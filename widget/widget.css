@@ -1,0 +1,181 @@
+/*-- Main widget --*/
+div[id^="getfile"] .card-widgets__widget__body {
+    padding: 0;
+}
+
+div[id^="getfile"] .title-wrap  {
+    background-color: #343638;
+    display: block;
+    margin: auto;
+}
+
+div[id^="getfile"] .wrapper  {
+    padding: 3px 10px 10px 10px;
+    background-color: #343638;
+}
+
+div[id^="getfile"] .widget-wrap  {
+    background-color: #FFFFFF;
+    padding: 10px;
+    font-size: 14px;
+}
+
+div[id^="getfile"] .file {
+    margin-bottom: 5px;
+    border-bottom: 1px solid #f1f1f1;
+    position: relative;
+}
+
+div[id^="getfile"] .file:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+div[id^="getfile"] .separate-line {
+    margin: 5px 0;
+    height: 2px;
+    background: #ccc;
+}
+
+div[id^="getfile"] .file-empty {
+    margin: -10px -10px 10px -10px;
+    padding: 15px 10px;
+    background: #eee;
+    text-align: center;
+}
+
+div[id^="getfile"] .files-form {
+    display: inline-block;
+}
+
+div[id^="getfile"] .files-form .files-upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    opacity: 0;
+    -ms-filter: 'alpha(opacity=0)';
+    font-size: 0;
+    direction: ltr;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+
+div[id^="getfile"] .open-folder {
+    float: right;
+}
+
+div[id^="getfile"] .widget-wrap > label {
+    font-size: 16px;
+    color: #333;
+    display: block;
+}
+
+div[id^="getfile"] .files-list.folder {
+    border-left: 2px solid #aaa;
+    padding: 5px 10px 5px;
+    display:none;
+}
+
+div[id^="getfile"] .files-form .button-input{
+    padding: 5px;
+    background: none;
+    color: #0B9444;
+    border:0;
+    font-weight: normal;
+}
+
+div[id^="getfile"] .drop-zone {
+    opacity: 0.8;
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 60px;
+    background: #aaa;
+    border: 2px dotted #333;
+}
+/*-- /Main widget --*/
+
+/*-- File row --*/
+div[id^="getfile"] .item-filename-wrapper {
+    width: 68%;
+    display: inline-block;
+    padding: 5px 5px 5px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+div[id^="getfile"] .item-action {
+    position: absolute;
+    right: 0;
+    top: 2px;
+}
+
+div[id^="getfile"] .item-action button {
+    margin-left: 0;
+    padding: 5px;
+}
+
+div[id^="getfile"] .item-file-icon {
+    width: 13px;
+    height: 13px;
+    background-size: 13px auto;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0;
+}
+
+div[id^="getfile"] .icon-download {
+    background-image: url(images/download.png);
+}
+
+div[id^="getfile"] .icon-remove {
+    background-image: url(images/remove.png);
+
+}
+/*-- /File row --*/
+
+/*-- Loader --*/
+div[id^="getfile"] .overlay-loader {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: rgba(34, 34, 34, 0.2);
+}
+
+div[id^="getfile"] .overlay-loader span {
+    width: 80px;
+    height: 80px;
+    display: table-cell;
+    top: 50%;
+    left: 50%;
+    margin: -40px 0 0 -40px;
+}
+/*-- /Loader --*/
+
+/*-- Uploader --*/
+div[id^="getfile"] .to_upload::after{
+    position: absolute;
+    left:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    line-height:100px;
+    background: #ddd;
+    border: 3px dotted #aaa;
+    font-size: 18px;
+    opacity: 0.9;
+    content: 'Бросьте, чтобы загрузить';
+    text-align: center;
+    vertical-align: baseline;
+    z-index:15;
+}
+/*-- /Uploader --*/

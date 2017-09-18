@@ -1,0 +1,9 @@
+{##
+ # Шаблон для вывода включения и отключения удаления из карточек
+ #
+ # @param string deleteallow
+ #}
+
+<div class="switcher_wrapper">
+    <span class="{% if deleteallow=='yes' %}switcher switcher__on{% else %}switcher switcher__off {% endif %} switcher_blue" id="getfile_deleteallow"></span>
+</div>

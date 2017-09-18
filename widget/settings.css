@@ -1,0 +1,14 @@
+div[id^="getfile"] .uri-field {
+    border-top: 1px solid #c1c1c1;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+div[id^="getfile"] .uri-field input {
+    background: #eee;
+    cursor: pointer;
+}
+
+#getfile_deleteallow{
+    margin-left:10px;
+}

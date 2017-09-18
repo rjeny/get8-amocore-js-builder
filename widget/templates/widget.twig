@@ -1,0 +1,36 @@
+{##
+ # Шаблон для отображения списка файлов
+ #
+ # @param array files - список файлов сделки на google.Диск
+ # @param sting folder
+ #}
+
+{% if files|length > 0 %}
+    <div class="files-list">
+        {% include 'templates/files-list.twig' with {'files': files, 'deleteallow': deleteallow} %}
+    </div>
+    <label>📁 AC</label>
+    <div class="files-list folder">
+        {% include 'templates/files-list.twig' with {'files': files, 'deleteallow': deleteallow, 'folderName': 'AC'} %}
+    </div>
+    <label>📁 Support</label>
+    <div class="files-list folder">
+        {% include 'templates/files-list.twig' with {'files': files, 'deleteallow': deleteallow, 'folderName': 'Support'} %}
+    </div>
+
+    <div class="separate-line"></div>
+{% else %}
+    <div class="file-empty">
+        Файлов нет
+    </div>
+{% endif %}
+
+{% if folder %}
+    <div>
+        <button class="button-input open-folder" data-href="https://drive.google.com/drive/folders/{{ folder }}">
+            <span class="button-input-inner">
+                <span class="button-input-inner__text">Открыть папку</span>
+            </span>
+        </button>
+    </div>
+{% endif %}

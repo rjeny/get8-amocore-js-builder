@@ -1,0 +1,45 @@
+{##
+ # Шаблон для отображения строки с информацией о файле
+ #
+ # @param array files
+ #}
+{% for id, info in files %}
+    {% if not folderName and not info.folder or folderName and info.folder == folderName %}
+    <div class="file" data-id="{{ id }}" title="{{ info.name~' '~info.modified_time }}">
+        <span class="item-filename-wrapper" data-href="https://drive.google.com/open?id={{ id }}">
+            {{ info.name }}
+        </span>
+
+        <span class="item-action">
+            <button class="button-input item-file-download" title="Скачать">
+                <span class="button-input-inner">
+                    <span class="item-file-icon icon-custom icon-download"></span>
+                    <span class="button-input-inner__text"></span>
+                </span>
+            </button>
+
+            {% if deleteallow=="yes" %}
+                <button class="button-input item-file-remove" title="Удалить">
+                    <span class="button-input-inner">
+                        <span class="item-file-icon icon-custom icon-remove"></span>
+                        <span class="button-input-inner__text"></span>
+                    </span>
+                </button>
+            {% endif %}
+        </span>
+    </div>
+    {% endif %}
+{% endfor %}
+
+<form enctype="multipart/form-data" class="files-form">
+    <label type="button" class="button-input">
+            <span class="button-input-inner button-input-add-inner files-plus">
+                <span class="button-input-inner__text">+ загрузить файл<span class="files-number"></span></span>
+            </span>
+        <input class="files-upload" type="file" name="files[]" multiple="" data-folder="{{ folderName }}">
+    </label>
+</form>
+
+<div class="drop-zone">
+
+</div>

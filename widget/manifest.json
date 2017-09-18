@@ -1,0 +1,46 @@
+{
+    "widget":
+    {
+        "name": "widget.name",
+        "description": "widget.description",
+        "short_description": "widget.short_description",
+        "code": "getfile_calltouchcrm",
+        "secret_key": "531768b58266ee6a9faf4c297dca48277f41a95121feff519a2af7bdddecbe9b",
+        "version": "0.1.51",
+        "locale":["ru"],
+        "installation": true,
+        "interface_version": 2
+    },
+    "locations":[
+        "lcard",
+        "settings"
+    ],
+    "settings":
+    {
+        "hash": {
+            "name": "settings.hash",
+            "type": "text",
+            "required": true
+        },
+        "client_id": {
+            "name": "settings.client_id",
+            "type": "text",
+            "required": true
+        },
+        "secret": {
+            "name": "settings.secret",
+            "type": "text",
+            "required": true
+        },
+        "folder": {
+            "name": "settings.folder",
+            "type": "text",
+            "required": false
+        },
+        "deleteallow":{
+            "name": "settings.deleteallow",
+            "type": "text",
+            "required": true
+        }
+    }
+}
